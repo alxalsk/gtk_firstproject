@@ -1,9 +1,10 @@
 #include<gtk.h>
+#include<string.h>
 	static GtkWidget *entry;
 	static GtkWidget *button;
 static void function(GtkWidget *widget, gpointer data)
 {
-	if(gtk_entry_get_text(GTK_ENTRY(entry)) == (gchar *)"Hello")
+	if(!strcmp(gtk_entry_get_text(GTK_ENTRY(entry)), (gchar *)"Hello"))
 		gtk_button_clicked(GTK_BUTTON(button));
 }
 int main(int argc, char **argv)
