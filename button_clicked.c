@@ -1,7 +1,7 @@
 #include<gtk.h>
 #include<string.h>
-	static GtkWidget *entry;
-	static GtkWidget *button;
+	GtkWidget *entry;
+	GtkWidget *button;
 static void function(GtkWidget *widget, gpointer data)
 {
 	if(!strcmp(gtk_entry_get_text(GTK_ENTRY(entry)), (gchar *)"Hello"))
