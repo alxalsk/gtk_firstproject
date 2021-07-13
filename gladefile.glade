@@ -5,42 +5,39 @@
   <object class="GtkWindow" id="window">
     <property name="can-focus">False</property>
     <child>
-      <!-- n-columns=1 n-rows=3 -->
-      <object class="GtkGrid">
+      <object class="GtkFixed">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
         <child>
-          <object class="GtkButton" id="button">
+          <object class="GtkButton">
             <property name="label" translatable="yes">button</property>
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
-            <property name="hexpand">True</property>
+            <property name="tooltip-text" translatable="yes">This is a button</property>
+            <signal name="clicked" handler="do_clicked" swapped="no"/>
           </object>
           <packing>
-            <property name="left-attach">0</property>
-            <property name="top-attach">0</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkEntry" id="entry">
-            <property name="visible">True</property>
-            <property name="can-focus">True</property>
-          </object>
-          <packing>
-            <property name="left-attach">0</property>
-            <property name="top-attach">2</property>
+            <property name="x">195</property>
+            <property name="y">47</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel" id="label">
+            <property name="width-request">97</property>
+            <property name="height-request">62</property>
             <property name="visible">True</property>
             <property name="can-focus">False</property>
-            <property name="label" translatable="yes">label</property>
+            <property name="tooltip-text" translatable="yes">This is a label</property>
+            <attributes>
+              <attribute name="foreground" value="#eded33333b3b"/>
+            </attributes>
           </object>
           <packing>
-            <property name="left-attach">0</property>
-            <property name="top-attach">1</property>
+            <property name="x">300</property>
+            <property name="y">206</property>
           </packing>
         </child>
       </object>
